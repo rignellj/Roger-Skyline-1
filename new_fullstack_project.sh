@@ -1,8 +1,10 @@
 #!/bin/bash
-npm install express body-parser mongoose ejs lodash
-echo "const express = require('express');
+npm install express body-parser mongoose ejs lodash dotenv mongoose-encryption
+echo "require('dotenv').config();
+const express = require('express');
 const body_parser = require('body-parser');
 const mongoose = require('mongoose');
+const encrypt = require('mongoose-encryption');
 const _ = require('lodash');
 const ejs = require('ejs');
 const app = express();
@@ -143,5 +145,3 @@ echo "web: node app.js" > Procfile
 git init
 git add .
 git commit -m "Initial commit"
-nodemon app.js
-atom .
