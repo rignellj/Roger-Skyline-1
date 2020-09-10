@@ -28,5 +28,8 @@ npm-debug.log
 .DS_Store
 /*.env" > .gitignore
 echo "web: node app.js" > Procfile
+git init
+git add .
+git commit -m "Initial commit"
 nodemon app.js
 atom .
