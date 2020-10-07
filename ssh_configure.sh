@@ -32,7 +32,14 @@ then
 else 
 	echo "sshd.bak already exists."
 fi
-echo "Run 'sudo service sshd restart' and check status running 'sudo service sshd status'"
+
+echo "Restarting sshd: "
+sleep 1
+service sshd restart
+
+echo "Checking status: "
+sleep 1
+service sshd status
 
 echo "Now users can only use their public keys to authenticate"
 echo ""
