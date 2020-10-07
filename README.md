@@ -17,7 +17,7 @@
 
 ## #Introduction <a id="introduction"></a>
 1. This part first installs required packages to your Linux Debian and also checks partitions
-2. Running `sudo ./intro.sh` will update & upgrade packages and also installs software
+2. Running `./intro.sh` will update & upgrade packages and also installs software
 that is needed for this project
 
 ## #Let's Create Nonroot User <a id="adduser"></a>
