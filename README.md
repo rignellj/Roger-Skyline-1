@@ -27,3 +27,7 @@ Run `sudo ./add_sudouser.sh` to create given user and give sudo privilages to th
 ## #Configure a Static IP <a id="staticIP"></a>
 1. Run `sudo ./configure_interfaces.sh` to configure `/etc/network/interfaces` file
 2. Next run `sudo ./configure_static_ip.sh`. This will prompt IP address, Netmask and Gateway and configures with given addresses.
+
+## #Change the SSH Default Port <a id="sshPort"></a>
+1. Before moving to next step, user needs to create new ssh public key. Script will also ask to do this.
+2. Run `./ssh_configure.sh` to reset SSH port number
