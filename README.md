@@ -3,8 +3,6 @@
 ## #Contents
 
 - [Introduction](#introduction)
-- [Debian VM Installation](#VMinstall)
-- [Updating OS Packages](#OSupdate)
 - [Creating Nonroot User](#adduser)
 - [Configure a Static IP](#staticIP)
 - [Change the SSH Default Port](#sshPort)
@@ -22,3 +20,7 @@
 1. This part first installs required packages to your Linux Debian
 2. Running `sudo ./intro.sh` will update & upgrade packages and also installs software
 that is needed for this project
+
+## #Let's create Nonroot User <a id="adduser"></a>
+Run `sudo ./add_sudouser.sh` to create given user and give sudo privilages to the user
+
