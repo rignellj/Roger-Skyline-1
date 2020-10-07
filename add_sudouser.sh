@@ -1,25 +1,12 @@
 #!/bin/bash
+
+# This script creates given user and gives sudo privilages to the user
+
 read -p "Give username: " USER
 
-sudo adduser ${USER}
-ADDUSER=$?
-
-LAST_PID=$!
-wait ${LAST_PID}
-
+adduser ${USER}
 sudo adduser ${USER} sudo
 ADDSUDO=$?
-
-LAST_PID=$!
-wait ${LAST_PID}
-
-if [ $ADDUSER -eq "0" ]
-then
-	echo "User created"
-else
-	echo "Could not create new user. Exiting 1..."
-	exit 1
-fi
 
 if [ $ADDSUDO -eq "0" ]
 then
