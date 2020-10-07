@@ -20,8 +20,12 @@ else
 	echo "Config file already exists."
 fi
 
-echo "Restart network running 'sudo service networking restart'"
-echo "Run 'ip a | grep enp0s3' to get info about network interfaces"
+echo "Restarting network"
+service networking restart
+
+echo "Info about network interfaces:"
+sleep 1
 echo ""
+ip a | grep enp0s3
 
 read -p "Press enter to continue: " ENTER
