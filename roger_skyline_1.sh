@@ -69,5 +69,3 @@ function status() {
 	printf "[\xe2\x9c\x98] Deployment Automation\n"
 }
 
-intro
-intro
