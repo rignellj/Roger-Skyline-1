@@ -1,5 +1,11 @@
 # Shell_Scripts for Web Server Deployment
 
+# Configure Web Server Using Scripts
+1. `apt install sudo && sudo apt update && sudo apt upgrade && sudo apt-get install git`
+2. `git clone https://github.com/rignellj/Roger-Skyline-1.git`
+3. `./roger_skyline_1.sh`
+
+
 ## #Contents
 
 - [Introduction](#introduction)
