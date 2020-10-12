@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INTERFACE="/etc/network/interfaces"
+local INTERFACE="/etc/network/interfaces"
 echo "Updating interfaces config files"
 
 if [ -s ${INTERFACE}.bak ]

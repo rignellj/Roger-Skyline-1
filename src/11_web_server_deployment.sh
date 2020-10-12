@@ -12,9 +12,9 @@ REDIRECT="/etc/apache2/sites-available/000-default.conf"
 
 if [ -s ${PARAMS} ]
 then
-	printf "\n${RED}\nDeployment stop. Config already set up.\n\n${RESET}"
-	echo "Exiting with status 1"
-	exit 1
+        printf "\n${RED}\nDeployment stop. Config already set up.\n\n${RESET}"
+        echo "Exiting with status 1"
+        exit 1
 fi
 
 printf "\n${WHITE}\nCreating the SSL Certificate...\n\n${RESET}"
@@ -98,12 +98,12 @@ TEST=$(apache2ctl configtest)
 
 if [ ${TEST} != "Syntax OK" ]
 then
-	echo "There was an error"
-	echo "ServerName localhost" >> /etc/apache2/apache2.conf
-	systemctl restart apache2
-	printf "\n${WHITE}\nLet's test changes AGAIN...\n${RESET}"
-	sleep 1
-	apache2ctl configtest
+        echo "There was an error"
+        echo "ServerName localhost" >> /etc/apache2/apache2.conf
+        systemctl restart apache2
+        printf "\n${WHITE}\nLet's test changes AGAIN...\n${RESET}"
+        sleep 1
+        apache2ctl configtest
 fi
 
 printf "\n${WHITE}\nSet up done\n${RESET}"
