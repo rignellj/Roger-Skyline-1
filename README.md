@@ -2,14 +2,14 @@
 
 There are two distinct ways of configuring web server:
 1. You can just copy three lines of code from section below `OR`
-2. Tou can follow the manual which come after Contents section
+2. You can follow the manual which come after Contents section
 
 ## Configure Web Server Using Scripts
 
 ```
 apt install sudo && sudo apt update && sudo apt upgrade && sudo apt-get install git
 git clone https://github.com/rignellj/Roger-Skyline-1.git
-./roger_skyline_1.sh
+sudo ./roger_skyline_1.sh
 ```
 
 #### Contents
