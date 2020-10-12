@@ -44,12 +44,10 @@ function dot() {
 	done
 }
 
-function start_animation() {
+function start_and_stop_animation() {
 	$1 &
 	ANIMATION_PID=$!
 	trap 'kill $ANIMATION_PID' SIGTERM SIGKILL
-}
-
-function stop_animation() {
+	sleep $2
 	kill ${ANIMATION_PID}
 }

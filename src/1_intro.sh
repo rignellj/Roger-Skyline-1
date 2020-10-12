@@ -6,9 +6,7 @@
 # apt install sudo && sudo apt update && sudo apt upgrade
 
 printf "${WHITE}Checking partition${NC}"
-start_animation dot
-sleep 2
-stop_animation
+start_and_stop_animation dot 2
 
 # fdisk -l | grep Linux
 
@@ -16,9 +14,7 @@ echo ""
 read -p "Press enter to continue installing: " ENTER
 
 printf "${WHITE}Installing ufw, portsentry, fail2ban, apache2, mailutils packages${NC}"
-start_animation dot
-sleep 3
-stop_animation
+start_and_stop_animation dot 3
 # apt-get install ufw portsentry fail2ban apache2 mailutils -y
 
 STATUS_SYMBOLS[0]=${SUCCESS}
