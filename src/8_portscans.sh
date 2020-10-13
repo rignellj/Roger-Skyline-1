@@ -24,24 +24,24 @@ fi
 printf "\n${WHITE}\nCreating backup file ${FILE}.bak and making edits${NC}"
 start_and_stop_animation dot 2
 
-# sed -i.bak "s/TCP_MODE=\"tcp\"/TCP_MODE=\"atcp\"/" ${FILE}
-# sed -i "s/UDP_MODE=\"udp\"/UDP_MODE=\"audp\"/" ${FILE}
+sed -i.bak "s/TCP_MODE=\"tcp\"/TCP_MODE=\"atcp\"/" ${FILE}
+sed -i "s/UDP_MODE=\"udp\"/UDP_MODE=\"audp\"/" ${FILE}
 
 printf "\n${WHITE}\nCreating backup file ${CONF_F}.bak and making edits${NC}"
 start_and_stop_animation dot 2
 
-# sed -i.bak "s/BLOCK_UDP=\"1\"/BLOCK_UDP=\"1\"/" ${CONF_F}
-# sed -i "s/BLOCK_TCP=\"1\"/BLOCK_TCP=\"1\"/" ${CONF_F}
-# sed -i "170 s/^#*/#/p" ${CONF_F}
-# sed -i "209 s/^#//p" ${CONF_F}
+sed -i.bak "s/BLOCK_UDP=\"1\"/BLOCK_UDP=\"1\"/" ${CONF_F}
+sed -i "s/BLOCK_TCP=\"1\"/BLOCK_TCP=\"1\"/" ${CONF_F}
+sed -i "170 s/^#*/#/p" ${CONF_F}
+sed -i "209 s/^#//p" ${CONF_F}
 
 printf "\n${WHITE}\nRestarting service:\n${NC}"
 /bin/sleep 1
-# service portsentry restart
+service portsentry restart
 
 printf "\n${WHITE}\nStatus of portsentry:\n${NC}"
 /bin/sleep 2
-# service portsentry status
+service portsentry status
 
 printf "\n${WHITE}\nYou can check which ports are open running 'lsof -i -P'\n${NC}"
 STATUS_SYMBOLS[6]=${SUCCESS}

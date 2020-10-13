@@ -17,5 +17,5 @@ printf "\n${WHITE}\nThanks!\n\n${NC}"
 printf "${WHITE}Copying${NC}"
 start_and_stop_animation dot 2
 
-# scp -r -P "${PORT}" "${USERNAME}"@"${IP}":"${REMOTE_DIR}" "${LOCAL_DIR}"
+scp -r -P "${PORT}" "${USERNAME}"@"${IP}":"${REMOTE_DIR}" "${LOCAL_DIR}"
 STATUS_SYMBOLS[10]=${SUCCESS}

@@ -26,21 +26,21 @@ if [ ! -s ${CONF_F}.bak ]
 then
 	echo -ne "Making changes to config ${CONF_F}"
 	start_and_stop_animation dot 3
-	# sed -i.bak '/Port/d ; /PasswordAuthentication/d ; /PermitRootLogin/d' ${CONF_F}
-	# echo "Port ${PORT}" >> ${CONF_F}
-	# echo "PasswordAuthentication no" >> ${CONF_F}
-	# echo "PermitRootLogin no" >> ${CONF_F}
+	sed -i.bak '/Port/d ; /PasswordAuthentication/d ; /PermitRootLogin/d' ${CONF_F}
+	echo "Port ${PORT}" >> ${CONF_F}
+	echo "PasswordAuthentication no" >> ${CONF_F}
+	echo "PermitRootLogin no" >> ${CONF_F}
 else 
 	echo "${CONF_F}.bak already exists."
 fi
 
 echo "Restarting sshd: "
 /bin/sleep 1
-# service sshd restart
+service sshd restart
 
 echo "Checking ssh status: "
 /bin/sleep 1
-# service sshd status
+service sshd status
 
 echo "Now users can only use their public keys to authenticate"
 STATUS_SYMBOLS[3]=${SUCCESS}
