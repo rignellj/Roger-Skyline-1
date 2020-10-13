@@ -7,7 +7,7 @@ There are two distinct ways of configuring web server:
 ## Configure Web Server Using Scripts
 
 ```
-apt install sudo && sudo apt update && sudo apt upgrade && sudo apt-get install git
+apt install sudo && sudo apt update && sudo apt upgrade && sudo apt-get install git -y
 git clone https://github.com/rignellj/Roger-Skyline-1.git
 sudo ./roger_skyline_1.sh
 ```
