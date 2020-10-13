@@ -22,8 +22,7 @@ sudo ./roger_skyline_1.sh
 - [DOS (Denial Of Service Attack) protection](#DOS)
 - [Protection Against Port Scans](#scanSecure)
 - [Disable the Services We Don’t Need](#DisableServices)
-- [Update Packages Script](#updateScript)
-- [Monitor Crontab Changes Script](#cronScript)
+- [Update Packages & Monitor Crontab Changes Scripts](#cronScript)
 - [Self-signed SSL and Debloyment](#apache)
 - [Deployment Automation](#automation)
 
