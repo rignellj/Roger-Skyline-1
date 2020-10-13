@@ -16,12 +16,6 @@ ADDSUDO=$?
 if [ $ADDSUDO = "0" ]
 then
 	echo "${USER} added to sudoers."
-	printf "${WHITE}\nChanging user${NC}"
-	start_and_stop_animation dot 3
-	chown -R ${USER} ${SCRIPTS}
-	mv ${SCRIPTS} ${USER_DIR}
-	su - ${USER}
-	cd ~/${FOLDER}
 	STATUS_SYMBOLS[1]=${SUCCESS}
 else
 	STATUS_SYMBOLS[1]=${ATTENTION}
