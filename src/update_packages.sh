@@ -6,7 +6,7 @@ WHITE="\033[1;37m"
 RESET="\033[0m"
 
 printf "\n${WHITE}\nUpdating packages...\n${RESET}"
-sleep 2
+/bin/sleep 2
 
 apt-get update -y >> /var/log/update.log
 apt-get upgrade -y >> /var/log/update.log

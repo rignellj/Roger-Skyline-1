@@ -18,6 +18,7 @@ NC='\033[0m'
 
 SUCCESS="${GREEN}[\xe2\x9c\x94]${NC}"
 FAILURE="${RED}[\xe2\x9c\x98]${NC}"
+ATTENTION="${YELLOW}[!]${NC}"
 
 COLORS=( ${BLACK} ${RED} ${GREEN} ${YELLOW} ${BLUE} ${PURPLE} ${CYAN} ${WHITE} )
 
@@ -30,7 +31,7 @@ function spin() {
 			for CHAR in "${SPINNER[@]}"
 			do
 				echo -ne "\r${CHAR}"
-				sleep 0.2
+				/bin/sleep 0.2
 			done
 		done
 	done
@@ -40,7 +41,7 @@ function dot() {
 	while [ 1 ]
 	do
 		echo -ne "."
-		sleep 0.2
+		/bin/sleep 0.2
 	done
 }
 
@@ -48,6 +49,10 @@ function start_and_stop_animation() {
 	$1 &
 	ANIMATION_PID=$!
 	trap 'kill $ANIMATION_PID' SIGTERM SIGKILL
-	sleep $2
+	/bin/sleep $2
 	kill ${ANIMATION_PID}
+	if [ $1 = "dot" ]
+	then
+		echo ""
+	fi
 }

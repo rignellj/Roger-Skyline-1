@@ -1,17 +1,21 @@
 #!/bin/bash
 
-WHITE='\033[1;37m'
-RESET='\033[0m'
+# This script configures firewall rules
 
-PORT_LINE=$(sed -n "/Port /p" /etc/ssh/sshd_config)
-PORT=$(echo ${PORT_LINE} | cut -d' ' -f 2)
+echo -ne "Configure firewall rules"
+start_and_stop_animation dot 3
 
-ufw default deny incoming
-ufw default allow outgoing
-ufw allow https #OR ufw allow 443
-ufw allow 80/tcp
-ufw allow ${PORT}/tcp
+# PORT_LINE=$(sed -n "/Port /p" /etc/ssh/sshd_config)
+# PORT=$(echo ${PORT_LINE} | cut -d' ' -f 2)
 
-printf "${WHITE}\nStatus table:\n${RESET}"
-sleep 1
-ufw status verbose
+# ufw default deny incoming
+# ufw default allow outgoing
+# ufw allow https #OR ufw allow 443
+# ufw allow 80/tcp
+# ufw allow ${PORT}/tcp
+
+printf "${WHITE}\nStatus table:\n${NC}"
+/bin/sleep 1
+# ufw status verbose
+
+STATUS_SYMBOLS[4]=${SUCCESS}

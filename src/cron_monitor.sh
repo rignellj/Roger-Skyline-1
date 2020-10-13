@@ -12,7 +12,7 @@ DIFF=$(diff /etc/crontab.bak /etc/crontab)
 if [ ! -s "${BAK}" ]
 then
 	printf "\n${WHITE}\nCrontab backup file doesn't exist. Creating one...\n${RESET}"
-	sleep 2
+	/bin/sleep 2
 	cat "${CRON}" > "${BAK}"
 	printf "\n${WHITE}\nExiting with status 0\n${RESET}"
 	exit 0

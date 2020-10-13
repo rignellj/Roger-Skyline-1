@@ -15,7 +15,7 @@ case $ANSWER in
 		exit 1
 	;;
 	*)
-		echo "Exiting."
+		echo "Exiting 1."
 		exit 1
 	;;
 esac
@@ -24,24 +24,23 @@ read -p "Give new ssh port to use: " PORT
 
 if [ ! -s ${CONF_F}.bak ]
 then
-	sed -i.bak '/Port/d ; /PasswordAuthentication/d ; /PermitRootLogin/d' ${CONF_F}
-	wait $($!)
-	echo "Port ${PORT}" >> ${CONF_F}
-	echo "PasswordAuthentication no" >> ${CONF_F}
-	echo "PermitRootLogin no" >> ${CONF_F}
+	echo -ne "Making changes to config ${CONF_F}"
+	start_and_stop_animation dot 3
+	# sed -i.bak '/Port/d ; /PasswordAuthentication/d ; /PermitRootLogin/d' ${CONF_F}
+	# echo "Port ${PORT}" >> ${CONF_F}
+	# echo "PasswordAuthentication no" >> ${CONF_F}
+	# echo "PermitRootLogin no" >> ${CONF_F}
 else 
-	echo "sshd.bak already exists."
+	echo "${CONF_F}.bak already exists."
 fi
 
 echo "Restarting sshd: "
-sleep 1
-service sshd restart
+/bin/sleep 1
+# service sshd restart
 
-echo "Checking status: "
-sleep 1
-service sshd status
+echo "Checking ssh status: "
+/bin/sleep 1
+# service sshd status
 
 echo "Now users can only use their public keys to authenticate"
-echo ""
-
-read -p "Press enter to continue: " ENTER
+STATUS_SYMBOLS[3]=${SUCCESS}
