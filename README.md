@@ -8,8 +8,8 @@ There are two distinct ways of configuring web server:
 
 ```
 apt install sudo && sudo apt update && sudo apt upgrade && sudo apt-get install git -y
-git clone https://github.com/rignellj/Roger-Skyline-1.git scripts
-sudo ./scripts/roger_skyline_1.sh
+git clone https://github.com/rignellj/Roger-Skyline-1.git scripts && cd scripts
+sudo ./roger_skyline_1.sh
 ```
 
 #### Contents
