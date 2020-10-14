@@ -5,13 +5,13 @@
 
 LOCAL_DIR="/var/www/html/"
 
-/usr/bin/printf "\n${WHITE}\nNow it's time to copy html files from your remote to your local system${NC}"
+/usr/bin/printf "\n${WHITE}\nNow it's time to copy html files from your REMOTE to your local system${NC}"
 start_and_stop_animation dot 2
 
-read -p "Give username of your remote machine: " USERNAME
-read -p "Give IP address of your remote machine: " IP
-read -p "SSH port number of your remote machine: " PORT
-read -p "Give directory path to the html files on your remote machine which will be copied: " REMOTE_DIR
+read -p "Give username of your REMOTE machine: " USERNAME
+read -p "Give IP address of your REMOTE machine: " IP
+read -p "SSH port number of your REMOTE machine: " PORT
+read -p "Give full path to the html files on your REMOTE machine which will be copied: " REMOTE_DIR
 
 /usr/bin/printf "\n${WHITE}\nThanks!\n\n${NC}"
 /usr/bin/printf "${WHITE}Copying${NC}"

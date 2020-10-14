@@ -94,15 +94,15 @@ start_and_stop_animation dot 1
 start_and_stop_animation dot 1
 TEST=$(/usr/bin/sudo apache2ctl configtest)
 
-if [ ${TEST} != "Syntax OK" ]
+if [[ ${TEST} != "Syntax OK" ]]
 then
         /usr/bin/echo "There was an error"
-        /usr/bin/echo "ServerName localhost" >> /etc/apache2/apache2.conf
+        /usr/bin/sudo /usr/bin/echo "ServerName localhost" >> /etc/apache2/apache2.conf
         /usr/bin/sudo /usr/bin/systemctl restart apache2
         /usr/bin/printf "\n${WHITE}\nLet's test changes AGAIN${NC}"
         start_and_stop_animation dot 1
         TEST=$(/usr/bin/sudo apache2ctl configtest)
-        if [ ${TEST} != "Syntax OK" ]
+        if [[ ${TEST} != "Syntax OK" ]]
         then
                 STATUS_SYMBOLS[9]=${ATTENTION}
                 /usr/bin/printf "\n${WHITE}\nSet up done\n${NC}"

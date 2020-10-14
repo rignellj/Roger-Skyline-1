@@ -4,10 +4,6 @@
 # It also changes to sudo user which will continue configure
 
 read -p "Give username: " USER
-read -p "Give scripts folder name: " FOLDER
-
-SCRIPTS="/root/${FOLDER}"
-USER_DIR="/home/${USER}/"
 
 /usr/bin/sudo adduser ${USER}
 /usr/bin/sudo adduser ${USER} sudo
