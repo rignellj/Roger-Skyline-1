@@ -3,6 +3,8 @@
 # This script performs additions to fail2ban.config file
 # and creates backup file of the original file
 
+source ../animation.sh
+
 /usr/bin/echo -ne "Configure Denial Of Service Attack (DOS)"
 start_and_stop_animation dot 3
 
@@ -63,12 +65,12 @@ ignoreregex =" > ${DOS_CONF_F}
 /usr/bin/sudo /usr/bin/systemctl enable fail2ban
 
 /usr/bin/printf "\n${WHITE}\nStatus of fail2ban:\n${NC}"
-/bin/sleep 2
+/bin/sleep 1
 
 /usr/bin/sudo /usr/bin/systemctl status fail2ban
 
 /usr/bin/printf "\n${WHITE}\nsudo iptables -L:\n${NC}"
-/bin/sleep 2
+/bin/sleep 1
 
 /usr/bin/sudo iptables -L
 

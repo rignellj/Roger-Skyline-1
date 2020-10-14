@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ../animation.sh
+
 INTERFACE="/etc/network/interfaces"
 /usr/bin/echo -ne "Updating interfaces config files"
 start_and_stop_animation dot 2

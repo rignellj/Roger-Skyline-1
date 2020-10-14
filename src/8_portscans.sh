@@ -2,6 +2,8 @@
 
 # This script configures file /etc/default/portsentry
 
+source ../animation.sh
+
 /usr/bin/echo -ne "Protection Against Port Scans"
 start_and_stop_animation dot 3
 

@@ -2,6 +2,8 @@
 
 # This script adds few tasks to crontab file
 
+source ../animation.sh
+
 read -p "Type username to whom cron jobs to configure. User should have sudo privilages: " ANSWER
 
 /usr/bin/echo -ne "Add few tasks to crontab file"

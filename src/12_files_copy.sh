@@ -3,6 +3,8 @@
 # This script prompts src from where to copy and copies
 # files to /var/www/html/
 
+source ../animation.sh
+
 LOCAL_DIR="/var/www/html/"
 
 /usr/bin/printf "\n${WHITE}\nNow it's time to copy html files from your REMOTE to your local system${NC}"

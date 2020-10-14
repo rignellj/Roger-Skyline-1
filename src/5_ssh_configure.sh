@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ../animation.sh
+
 CONF_F="/etc/ssh/sshd_config"
 read -p "Have you already added public key to server? Answer 'yes' or 'no': " ANSWER
 

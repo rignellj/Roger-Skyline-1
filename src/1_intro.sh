@@ -3,6 +3,8 @@
 # This script updates & upgrades packages and also installs software
 # that is needed for this project
 
+source ../animation.sh
+
 apt install sudo && /usr/bin/sudo apt update && /usr/bin/sudo apt upgrade
 
 /usr/bin/printf "${WHITE}\nChecking partition${NC}"

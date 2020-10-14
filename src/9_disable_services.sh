@@ -2,6 +2,8 @@
 
 # This script disables unnecessary services
 
+source ../animation.sh
+
 /usr/bin/echo -ne "Disable unnecessary services"
 start_and_stop_animation dot 3
 

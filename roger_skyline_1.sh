@@ -2,7 +2,6 @@
 
 # This script configures everything that is needed for web server.
 
-source animation.sh
 source status.sh
 
 source src/1_intro.sh
