@@ -14,17 +14,17 @@ git clone https://github.com/rignellj/Roger-Skyline-1.git scripts && cd scripts
 
 #### Contents
 
-- 1.[Introduction](#introduction)
-- 2.[Creating Nonroot User](#adduser)
-- 3.[Configure a Static IP](#staticIP)
-- 4.[Change the SSH Default Port and Setup SSH Access With Publickeys](#sshPubkey)
-- 5.[Firewall Setup With UFW](#ufw)
-- 6.[DOS (Denial Of Service Attack) protection](#DOS)
-- 7.[Protection Against Port Scans](#scanSecure)
-- 8.[Disable the Services We Don’t Need](#DisableServices)
-- 9.[Update Packages & Monitor Crontab Changes Scripts](#cronScript)
-- 10.[Self-signed SSL and Debloyment](#apache)
-- 11.[Deployment Automation](#automation)
+- 1.  [**Introduction**](#introduction)
+- 2.  [**Creating Nonroot User**](#adduser)
+- 3.  [**Configure a Static IP**](#staticIP)
+- 4.  [**Change the SSH Default Port and Setup SSH Access With Publickeys**](#sshPubkey)
+- 5.  [**Firewall Setup With UFW**](#ufw)
+- 6.  [**DOS (Denial Of Service Attack) protection**](#DOS)
+- 7.  [**Protection Against Port Scans**](#scanSecure)
+- 8.  [**Disable the Services We Don’t Need**](#DisableServices)
+- 9.  [**Update Packages & Monitor Crontab Changes Scripts**](#cronScript)
+- 10. [**Self-signed SSL and Debloyment**](#apache)
+- 11. [**Deployment Automation**](#automation)
 
 ### Introduction <a id="introduction"></a>
 1. This part first installs required packages to your Linux Debian and also checks partitions
