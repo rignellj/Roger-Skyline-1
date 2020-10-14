@@ -7,26 +7,26 @@ read -p "IP Address: " IP
 read -p "Netmask: " NETMASK
 read -p "Gateway: " GATEWAY
 
-echo "Updating config file ${PATH}/${FILE}"
+/usr/bin/echo "Updating config file ${PATH}/${FILE}"
 
 if [ ! -s ${PATH}/${FILE} ]
 then
-	echo -ne "Creating ${FILE}"
+	/usr/bin/echo -ne "Creating ${FILE}"
 	start_and_stop_animation dot 2
-	echo "iface ${FILE} inet static" > ${PATH}/${FILE}
-	echo "	address ${IP}" >> ${PATH}/${FILE}
-	echo "	netmask ${NETMASK}" >> ${PATH}/${FILE}
-	echo "	gateway ${GATEWAY}" >> ${PATH}/${FILE}
+	/usr/bin/echo "iface ${FILE} inet static" > ${PATH}/${FILE}
+	/usr/bin/echo "	address ${IP}" >> ${PATH}/${FILE}
+	/usr/bin/echo "	netmask ${NETMASK}" >> ${PATH}/${FILE}
+	/usr/bin/echo "	gateway ${GATEWAY}" >> ${PATH}/${FILE}
 else
-	echo "Config file already exists."
+	/usr/bin/echo "Config file already exists."
 fi
 
-echo "Restarting network"
-sudo service networking restart
+/usr/bin/echo "Restarting network"
+/usr/bin/sudo service networking restart
 
-echo "Info about network interfaces:"
+/usr/bin/echo "Info about network interfaces:"
 /bin/sleep 2
-echo ""
-ip a | /usr/bin/grep enp0s3
+/usr/bin/echo ""
+/usr/bin/ip a | /usr/bin/grep enp0s3
 
 STATUS_SYMBOLS[2]=${SUCCESS}
