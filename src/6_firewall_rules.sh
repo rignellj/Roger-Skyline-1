@@ -6,7 +6,7 @@
 start_and_stop_animation dot 3
 
 PORT_LINE=$(/usr/bin/sudo /usr/bin/sed -n "/Port /p" /etc/ssh/sshd_config)
-PORT=$(echo ${PORT_LINE} | cut -d' ' -f 2)
+PORT=$(/usr/bin/echo ${PORT_LINE} | /usr/bin/cut -d' ' -f 2)
 
 /usr/bin/sudo ufw default deny incoming
 /usr/bin/sudo ufw default allow outgoing
