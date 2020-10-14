@@ -22,11 +22,11 @@ else
 fi
 
 echo "Restarting network"
-service networking restart
+sudo service networking restart
 
 echo "Info about network interfaces:"
 /bin/sleep 2
 echo ""
-ip a | grep enp0s3
+ip a | /usr/bin/grep enp0s3
 
 STATUS_SYMBOLS[2]=${SUCCESS}
