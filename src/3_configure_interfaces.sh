@@ -8,6 +8,6 @@ if [ -s ${INTERFACE}.bak ]
 then
 	printf "${WHITE}\nBackup file exists.${NC}"
 else
-	sed -i.bak "s/allow-hotplug enp0s3/auto enp0s3/ ; /iface enp0s3 inet dhcp/d" ${INTERFACE}
+	sudo sed -i.bak "s/allow-hotplug enp0s3/auto enp0s3/ ; /iface enp0s3 inet dhcp/d" ${INTERFACE}
 	printf "${WHITE}\nConfig file updated. Backup file was created.\n\n${NC}"
 fi

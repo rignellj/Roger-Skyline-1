@@ -9,8 +9,8 @@ read -p "Give scripts folder name: " FOLDER
 SCRIPTS="/root/${FOLDER}"
 USER_DIR="/home/${USER}/"
 
-adduser ${USER}
-adduser ${USER} sudo
+sudo adduser ${USER}
+sudo adduser ${USER} sudo
 ADDSUDO=$?
 
 if [ $ADDSUDO = "0" ]
