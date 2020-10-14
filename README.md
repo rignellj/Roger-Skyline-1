@@ -23,7 +23,7 @@ git clone https://github.com/rignellj/Roger-Skyline-1.git scripts && cd scripts
 7.  [**Protection Against Port Scans**](#portScans)
 8.  [**Disable the Services We Don’t Need**](#DisableServices)
 9.  [**Update Packages & Monitor Crontab Changes Scripts**](#cronScript)
-10. [**Self-signed SSL and Debloyment**](#SSL)
+10. [**Self-signed SSL and Deployment**](#SSL)
 11. [**Deployment Automation**](#automate)
 
 ### Introduction <a id="introduction"></a>
@@ -55,7 +55,7 @@ Run `./2_add_sudouser.sh` to create given user and give sudo privilages to the u
 ### Update Packages & Monitor Crontab Changes Scripts <a id="cronScript"></a>
 1. Running `./10_cron_conf.sh` will add few tasks to crontab file
 
-### Self-signed SSL and Debloyment <a id="SSL"></a>
+### Self-signed SSL and Deployment <a id="SSL"></a>
 1. Running `./11_web_server_deployment.sh` will set self-signed SSL and also will handle all the config according to that.
 
 ### Deployment Automation <a id="automate"></a>
