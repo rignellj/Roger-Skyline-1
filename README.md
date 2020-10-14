@@ -63,5 +63,5 @@ Run `./2_add_sudouser.sh` to create given user and give sudo privilages to the u
 
 
 *********************
-End of Deployment
+                                                      **End of Deployment**
 *********************
