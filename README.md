@@ -20,11 +20,11 @@ git clone https://github.com/rignellj/Roger-Skyline-1.git scripts && cd scripts
 4.  [**Change the SSH Default Port and Setup SSH Access With Publickeys**](#sshPubkey)
 5.  [**Firewall Setup With UFW**](#ufw)
 6.  [**DOS (Denial Of Service Attack) protection**](#DOS)
-7.  [**Protection Against Port Scans**](#scanSecure)
+7.  [**Protection Against Port Scans**](#portScans)
 8.  [**Disable the Services We Don’t Need**](#DisableServices)
 9.  [**Update Packages & Monitor Crontab Changes Scripts**](#cronScript)
-10. [**Self-signed SSL and Debloyment**](#apache)
-11. [**Deployment Automation**](#automation)
+10. [**Self-signed SSL and Debloyment**](#SSL)
+11. [**Deployment Automation**](#automate)
 
 ### Introduction <a id="introduction"></a>
 1. This part first installs required packages to your Linux Debian and also checks partitions
@@ -41,3 +41,16 @@ Run `sudo ./add_sudouser.sh` to create given user and give sudo privilages to th
 ### Change the SSH Default Port and Setup SSH Access With Publickeys <a id="sshPubkey"></a>
 1. Before moving to next step, user needs to create new ssh public key. Script will also ask to do this.
 2. Run `./ssh_configure.sh` to reset SSH port number
+
+### Denial Of Service Attack (DOS) protection <a id="DOS"></a>
+
+### Protection Against Port Scans <a id="portScans"></a>
+
+### Disable the Services We Don’t Need <a id="DisableServices"></a>
+
+### Update Packages & Monitor Crontab Changes Scripts <a id="cronScript"></a>
+
+### Self-signed SSL and Debloyment <a id="SSL"></a>
+
+### Deployment Automation <a id="automate"></a>
+
