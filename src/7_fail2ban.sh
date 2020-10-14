@@ -7,7 +7,7 @@
 start_and_stop_animation dot 3
 
 PORT_LINE=$(/usr/bin/sudo /usr/bin/sed -n "/Port /p" /etc/ssh/sshd_config)
-PORT=$(/usr/bin/echo ${PORT_LINE} | cut -d' ' -f 2)
+PORT=$(/usr/bin/echo ${PORT_LINE} | /usr/bin/cut -d' ' -f 2)
 CONF_F="/etc/fail2ban/jail.conf"
 DOS_CONF_F="/etc/fail2ban/filter.d/http-get-dos.conf"
 
