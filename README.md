@@ -62,6 +62,6 @@ Run `./2_add_sudouser.sh` to create given user and give sudo privilages to the u
 1. Running `./12_files_copy.sh` will start process which will ask user certain questions according from which machine to copy, which SSH ports to use, what is the result of $(whoami) on remote (host) and the full path to files to copy.
 
 
-*********************
-                                                      **End of Deployment**
-*********************
+***************************************************************************************************************************************
+                                                    **End of Deployment
+***************************************************************************************************************************************
