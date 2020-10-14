@@ -5,7 +5,7 @@
 /usr/bin/echo -ne "Configure firewall rules"
 start_and_stop_animation dot 3
 
-PORT_LINE=$(sed -n "/Port /p" /etc/ssh/sshd_config)
+PORT_LINE=$(/usr/bin/sudo /usr/bin/sed -n "/Port /p" /etc/ssh/sshd_config)
 PORT=$(echo ${PORT_LINE} | cut -d' ' -f 2)
 
 /usr/bin/sudo ufw default deny incoming

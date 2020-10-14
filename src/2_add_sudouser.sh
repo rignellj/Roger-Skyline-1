@@ -10,7 +10,7 @@ SCRIPTS="/root/${FOLDER}"
 USER_DIR="/home/${USER}/"
 
 /usr/bin/sudo adduser ${USER}
-/usr/bin/sudo adduser ${USER} /usr/bin/sudo
+/usr/bin/sudo adduser ${USER} sudo
 ADDSUDO=$?
 
 if [ $ADDSUDO = "0" ]
