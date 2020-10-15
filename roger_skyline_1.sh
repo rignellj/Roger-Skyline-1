@@ -4,29 +4,29 @@
 
 source status.sh
 
-source src/1_intro.sh
+source src/01_intro.sh
 status 1
 
-source src/2_add_sudouser.sh
+source src/02_add_sudouser.sh
 status 2
 
-source src/3_configure_interfaces.sh
-source src/4_configure_static_ip.sh
+source src/03_configure_interfaces.sh
+source src/04_configure_static_ip.sh
 status 2.4
 
-source src/5_ssh_configure.sh
+source src/05_ssh_configure.sh
 status 2.6
 
-source src/6_firewall_rules.sh
+source src/06_firewall_rules.sh
 status 2.8
 
-source src/7_fail2ban.sh
+source src/07_fail2ban.sh
 status 3
 
-source src/8_portscans.sh
+source src/08_portscans.sh
 status 3.2
 
-source src/9_disable_services.sh
+source src/09_disable_services.sh
 status 3.4
 
 source src/10_cron_conf.sh
