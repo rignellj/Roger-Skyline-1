@@ -1,10 +1,10 @@
-# Shell_Scripts for Web Server Deployment
+# Shell Scripts for Web Server Deployment
 
 There are two distinct ways of configuring web server:
 1. You can just copy three lines of code from section below `OR`
 2. You can follow the manual which come after Contents section
 
-## Configure Web Server Using Scripts
+## Run these lines of code to start automate process
 
 ```
 cd && apt install sudo && sudo apt update && sudo apt upgrade && sudo apt-get install git -y
