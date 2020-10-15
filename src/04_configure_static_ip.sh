@@ -24,6 +24,8 @@ fi
 /usr/bin/echo "Restarting network"
 /usr/bin/sudo service networking restart
 
+/usr/bin/ip link set enp0s3 up
+
 /usr/bin/echo "Info about network interfaces:"
 /bin/sleep 2
 /usr/bin/echo ""
