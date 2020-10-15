@@ -7,9 +7,10 @@ source ../animation.sh
 
 apt install sudo && /usr/bin/sudo apt update && /usr/bin/sudo apt upgrade
 
-/usr/bin/printf "${WHITE}\nChecking partition${NC}"
+/usr/bin/printf "${WHITE}\nChecking partition and disk size${NC}"
 start_and_stop_animation dot 2
 
+/usr/bin/df -h
 /usr/bin/sudo fdisk -l | /usr/bin/grep Linux
 
 read -p "Press enter to continue installing: " ENTER

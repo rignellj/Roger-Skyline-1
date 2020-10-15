@@ -15,6 +15,7 @@ PORT=$(/usr/bin/echo ${PORT_LINE} | /usr/bin/cut -d' ' -f 2)
 /usr/bin/sudo ufw allow https #OR ufw allow 443
 /usr/bin/sudo ufw allow 80/tcp
 /usr/bin/sudo ufw allow ${PORT}/tcp
+/usr/bin/sudo ufw enable
 
 /usr/bin/printf "${WHITE}\nStatus table:\n${NC}"
 /bin/sleep 1

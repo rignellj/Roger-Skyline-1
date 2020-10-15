@@ -69,13 +69,12 @@ ignoreregex =" > ${DOS_CONF_F}
 
 /usr/bin/sudo /usr/bin/systemctl status fail2ban
 
-/usr/bin/printf "\n${WHITE}\nsudo iptables -L:\n${NC}"
+/usr/bin/printf "\n${WHITE}\nSee the rules added by fail2ban\nsudo iptables -L:\n${NC}"
 /bin/sleep 1
-
 /usr/bin/sudo iptables -L
 
 /usr/bin/printf	"\n${WHITE}\nNow you can test server by '<wrong-username>@<hostname>' \
-and check 'sudo fail2ban-client status sshd' filter and action status\n${NC}"
+and check '/usr/bin/sudo fail2ban-client status sshd' filter and action status\n${NC}"
 /usr/bin/printf	"\n${WHITE}\nRun 'sudo tail -f /var/log/fail2ban.log' to see which IPs have been blocked to use ssh\n${NC}"
 
 STATUS_SYMBOLS[5]=${SUCCESS}

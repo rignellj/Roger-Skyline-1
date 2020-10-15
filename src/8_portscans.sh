@@ -45,5 +45,5 @@ start_and_stop_animation dot 2
 /bin/sleep 2
 /usr/bin/sudo service portsentry status
 
-/usr/bin/printf "\n${WHITE}\nYou can check which ports are open running 'lsof -i -P'\n${NC}"
+/usr/bin/printf "\n${WHITE}\nYou can check which ports are open running '/usr/bin/lsof -i -P'\n${NC}"
 STATUS_SYMBOLS[6]=${SUCCESS}
