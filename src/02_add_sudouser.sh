@@ -3,8 +3,6 @@
 # This script creates given user and gives sudo privilages to the user.
 # It also changes to sudo user which will continue configure
 
-source ../animation.sh
-
 read -p "Give username: " USER
 
 /usr/bin/sudo adduser ${USER}

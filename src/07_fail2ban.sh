@@ -3,8 +3,6 @@
 # This script performs additions to fail2ban.config file
 # and creates backup file of the original file
 
-source ../animation.sh
-
 /usr/bin/echo -ne "Configure Denial Of Service Attack (DOS)"
 start_and_stop_animation dot 3
 

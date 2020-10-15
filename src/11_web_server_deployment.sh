@@ -2,8 +2,6 @@
 
 # This script creates the ssl certificate and configures apache
 
-source ../animation.sh
-
 PARAMS="/etc/apache2/conf-available/ssl-params.conf"
 VIRTUALHOST="/etc/apache2/sites-available/default-ssl.conf"
 REDIRECT="/etc/apache2/sites-available/000-default.conf"

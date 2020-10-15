@@ -2,8 +2,6 @@
 
 # This script configures firewall rules
 
-source ../animation.sh
-
 /usr/bin/echo -ne "Configure firewall rules"
 start_and_stop_animation dot 3
 

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ../animation.sh
-
 PATH="/etc/network/interfaces.d"
 FILE="enp0s3"
 
