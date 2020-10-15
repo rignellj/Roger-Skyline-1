@@ -28,29 +28,29 @@ git clone https://github.com/rignellj/Roger-Skyline-1.git scripts && cd scripts
 
 ### Introduction <a id="introduction"></a>
 1. This part first installs required packages to your Linux Debian and also checks partitions
-2. Running `./1_intro.sh` will update & upgrade packages and also installs software
+2. Running `./01_intro.sh` will update & upgrade packages and also installs software
 that is needed for this project
 
 ### Let's Create Nonroot User <a id="adduser"></a>
-Run `./2_add_sudouser.sh` to create given user and give sudo privilages to the user
+Run `./02_add_sudouser.sh` to create given user and give sudo privilages to the user
 
 ### Configure a Static IP <a id="staticIP"></a>
-1. Run `./3_configure_interfaces.sh` to configure `/etc/network/interfaces` file
-2. Next run `./4_configure_static_ip.sh`. This will prompt IP address, Netmask and Gateway and configures with given addresses.
+1. Run `./03_configure_interfaces.sh` to configure `/etc/network/interfaces` file
+2. Next run `./04_configure_static_ip.sh`. This will prompt IP address, Netmask and Gateway and configures with given addresses.
 
 ### Change the SSH Default Port and Setup SSH Access With Publickeys <a id="sshPubkey"></a>
 1. Before moving to next step, user needs to create new ssh public key. Script will also ask to do this.
-2. Run `./5_ssh_configure.sh` to reset SSH port number
+2. Run `./05_ssh_configure.sh` to reset SSH port number
 
 ### Denial Of Service Attack (DOS) protection & Firewall rules <a id="DOS"></a>
-1. Run `./6_firewall_rules.sh` to set up firewall rules
-2. Then `./7_fail2ban.sh` will handle all the config for the DOS which will protect your open ports of your VM.
+1. Run `./06_firewall_rules.sh` to set up firewall rules
+2. Then `./07_fail2ban.sh` will handle all the config for the DOS which will protect your open ports of your VM.
 
 ### Protection Against Port Scans <a id="portScans"></a>
-1. `./8_portscans.sh` will set protection against scans on your VM’s open ports.
+1. `./08_portscans.sh` will set protection against scans on your VM’s open ports.
 
 ### Disable the Services We Don’t Need <a id="DisableServices"></a>
-1. `./9_disable_services.sh`--> This script disables unnecessary services.
+1. `./09_disable_services.sh`--> This script disables unnecessary services.
 
 ### Update Packages & Monitor Crontab Changes Scripts <a id="cronScript"></a>
 1. Running `./10_cron_conf.sh` will add few tasks to crontab file
